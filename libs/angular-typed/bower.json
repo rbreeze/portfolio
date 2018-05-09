@@ -1,0 +1,25 @@
+{
+    "name": "angular-typed",
+    "version": "1.5.0",
+    "authors": [
+        "Gediminas Ubartas <gedisu@gmail.com>"
+    ],
+    "description": "Angular typed",
+    "main": "dist/angular-typed.js",
+    "keywords": [
+        "angular",
+        "angular-typed"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/Gedzis/angular-typed",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "angular": "~1.5.0"
+    }
+}
