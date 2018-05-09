@@ -36,6 +36,8 @@ angular.module('MainCtrl', []).controller('MainController', function($scope, $ht
     });
   }
 
+  welcome(); 
+
   var help = function() {
     $scope.commands = ["clear", "welcome", "echo", "health", "music", "resume", "about", "personal"];
     var $l = $scope.lines;
