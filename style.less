@@ -3,6 +3,11 @@
 @green: #23FB0E; 
 @fontSize: 15px;
 
+@font-face {
+  font-family: 'SF Mono';
+  src: url('SFMono-Regular.otf');
+}
+
 html, body, .main-content, div[ng-view] {
   height: 100%; 
 }
@@ -123,3 +128,15 @@ i {
     }
   }
 }
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    padding-bottom: 70px;
+  }
+
+  .main-content {
+    width: 100%;
+    height: 60%;
+  }
+} 
