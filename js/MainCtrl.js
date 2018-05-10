@@ -152,7 +152,7 @@ angular.module('MainCtrl', []).controller('MainController', function($scope, $ht
   var resumeInit = function() {
     var $l = $scope.lines;
     $l.push('*****');
-    $l.push('Remington’s Extended Software Utility for Maxiumum Exploment');
+    $l.push('Remington’s Extended Software Utility for Maxiumum Employment');
     $l.push('<em>RESUME : v1.0</em>');
     $l.push('*****'); 
     $l.push('Select an option from the list below: ');  
