@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<head>
+<title>style.less</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet" href="prism/prism.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<xmp>
+/*	    
+                                         
+	┌──────────────────────────────────────────┐  
+	│ ┌──────────────────────────────────────┐ │  
+	│ │    This site was coded with <3 by    │ │  
+	│ │           Remington Breeze           │ │  
+	│ └──────────────────────────────────────┘ │  
+	└──────────────────────────────────────────┘  
+
+*/
+
+@font-face {
+	src: url('avenirnext.otf');
+	font-family: 'Avenir Next';
+	font-weight: 500;
+}
+
+@font-face {
+	src: url('helveticaneue.dfont');
+	font-family: 'Helvetica Neue';
+}
+
+@font-face {
+	src: url('andalemxono.ttf');
+	font-family: 'Andale Mono';
+}
+
+body, html {
+	margin: 0; padding: 0;
+}
+
+body {
+	font-family: 'Avenir Next';
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+::selection, ::-webkit-selection {
+	background: #BBE7F0 !important;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container {
+
+	padding-top: 25px;
+
+	display: block;
+	margin: 0 auto;
+	width: 550px;
+	@media (max-width: 590px) {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+h1, h2, h3 {
+	text-align: center;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 43px;
+	margin-bottom: 13px;
+	a.main-link {
+		text-decoration: none;
+		color: #000;
+	}
+}
+
+.caps {
+	text-transform: uppercase;
+}
+
+p {
+	display: block;
+	margin: 25px auto;
+	margin-bottom: 30px;
+  	margin-top: 15px;
+	width: 550px;
+}
+
+pre {
+	display: block;
+	margin: 0 auto;
+	margin-top: 21px;
+	margin-bottom: 27px;
+	width: 520px;
+	@media (max-width: 620px) {
+		width: 80%;
+	}
+}
+
+xmp {
+	font-family: 'Monaco';
+}
+
+.student, .athlete, .developer, .circle {
+	cursor: pointer;
+}
+
+@terminal-width: 500px;
+@terminal-height: 39px;
+@top-bar-height: 23px;
+
+.terminal-container {
+	width: @terminal-width;
+	height: @terminal-height;
+	display: block;
+	position: relative;
+	margin: 25px auto;
+	z-index: -10;
+
+	.terminal {
+		display: none;
+		background: #000;
+		position: absolute;
+		width: @terminal-width - 30;
+		font-family: 'Andale Mono';
+		color: #3BFC31;
+		border-radius: 10px 10px 5px 5px;
+		border: 1px solid #3C3C3C;
+		padding: 0px 15px 0px 15px;
+		height: @terminal-height;
+		color: transparent;
+		padding-top: @top-bar-height+9px;
+		font-size: 15px;
+		line-height: 25px;
+		cursor: default;
+		.noselect;
+
+		a {
+			color: #007dff;
+		}
+
+	}
+
+}
+
+.top-bar {
+	display: none;
+	position: absolute;
+	border-radius: 5px 5px 0px 0px;
+	width: @terminal-width;
+	top: 0px;
+	left: 1px;
+	margin: 0 auto;
+	border: 1px solid #bcbcbc;
+	background-image: linear-gradient(#F6F6F6, #D3D3D3);		
+	height: @top-bar-height;
+	margin-top: -1px;
+	margin-left: -1px;
+	z-index: 10;
+
+	.title {
+		display: block;
+		margin: 0 auto;
+		font-family: 'Helvetica Neue';
+		font-size: 13px;
+		line-height: @top-bar-height;
+		text-align: center;
+		color: #5b5b5b;
+		.noselect;
+		cursor: default;
+	}
+
+	.circle-container {
+		@size: 11px;
+		display: block;
+		position: absolute;
+		margin-left: 5px;
+		margin-top: -1 * (@size + 10)/2;
+		top: 50%;
+    	.circle {
+    		margin: 4px;
+    		display: block;
+			height: @size;
+			width: @size;
+			border-radius: 100%;
+			float: left;
+    	}
+
+    	.circle.red {
+    		background: #FD6157;
+    		border: 1px solid #F55449;
+    	}
+
+    	.circle.yellow {
+    		background: #FEBE2E;
+    		border: 1px solid #F6B32A;
+    	}
+
+    	.circle.green {
+    		background: #28CB42;
+    		border: 1px solid #1EC234;
+    	}
+
+	}
+
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.button {
+	background: #DBF6FD;
+	border-bottom: 2px solid #8DD2FF;
+	font-size: 20px;
+	color: #38649A;
+	text-align: center;
+	padding: 7px;	
+	width: 107px;
+	margin: 0 auto;
+	display: block;
+	text-shadow: 0px 1px 0px #fff;
+	.noselect;
+	cursor: pointer;
+}
+
+.button.click {
+	border-bottom: 1px solid #8DD2FF;
+	margin-top: 1px;
+}
+
+.button.inactive {
+	background: #ebebeb;
+	border-bottom: 2px solid #6d6d6d;
+	color: #6c6c6c;
+}
+
+.button.contact {
+	display: none;
+	margin-top: -1 * (@terminal-height + 25);
+}
+
+.button.submit {
+	display: none;
+	-webkit-appearance: none;
+	outline: none;
+	border: none;
+	width: 97px;
+	margin: 20px auto;
+	font-size: 20px;
+	border-bottom: 2px solid #8DD2FF;
+
+}
+
+.submit-container {
+	display: block;
+	text-align: center;
+}
+
+form.contact {
+	display: none;
+	-webkit-appearance: none;
+	margin: 25px auto;
+
+	::-webkit-input-placeholder {
+		font-family: 'Avenir Next';
+	}
+
+	input, input:focus {
+		display: block;
+		outline: none;
+		padding: 11px;
+		margin: 5px auto;
+		font-size: 13px;
+		width: 175px;
+		font-family: 'Avenir Next';
+	}
+}
+
+
+</xmp>
+
+</body>
+</html>

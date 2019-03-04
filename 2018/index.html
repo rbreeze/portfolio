@@ -1,0 +1,67 @@
+<!-- public/index.html  -->
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <base href="/">
+
+  <title> Remington Breeze </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet/less" type="text/css" href="style.less">
+
+</head>
+
+<body ontouchstart="" ng-app="breeze.software" ng-controller="MainController">
+  <!-- ANGULAR DYNAMIC CONTENT -->
+  <div class="main-content">
+    <div class="terminal">
+      <div class="lines" scroll-glue>
+        <div class="line" ng-show="typing">
+          {{ label }} <span class="typed"></span>
+        </div>
+
+        <div class="line" ng-repeat="line in lines track by $index" ng-show="!typing">
+          <span ng-bind-html="line"></span>
+        </div>
+
+        <form class="current-line line" ng-submit="execute()" ng-show="!typing">
+          <div class="label" ng-if="label">
+            <span class="text">{{ label }}</span>&nbsp;
+          </div>
+          <input class="current-line-input" type="text" ng-model="currentLine" autofocus>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="header">
+      <img class="profile" src="./images/profile.jpg" />
+      <h1> Remington <br> Breeze </h1>
+    </div>
+    <div class="links">
+      <a ng-click="typing||typeAndExecute('resume')">Professional</a>
+      <a ng-click="typing||typeAndExecute('personal')">Personal</a>
+      <a ng-click="typing||typeAndExecute('about')">About Me</a>
+    </div>
+  </div>
+</body>
+
+<base href="/portfolio/">
+
+<!-- JS -->
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/angular/angular.min.js"></script>
+<script src="libs/angular-route/angular-route.min.js"></script>
+<script src="libs/angular-scroll-glue/src/scrollglue.js"></script>
+<script src="libs/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="libs/typed.js/lib/typed.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js" ></script>
+
+<!-- ANGULAR CUSTOM -->
+<script src="js/MainCtrl.js"></script>
+<script src="js/appRoutes.js"></script>
+<script src="js/app.js"></script>

@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<head>
+<title>index.html</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet" href="prism/prism.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<xmp>
+<!--                                                      
+	                                             
+	┌──────────────────────────────────────────┐  
+	│ ┌──────────────────────────────────────┐ │  
+	│ │    This site was coded with <3 by    │ │  
+	│ │           Remington Breeze           │ │  
+	│ └──────────────────────────────────────┘ │  
+	└──────────────────────────────────────────┘  
+	                     │                       
+	         ┌───────────┘                       
+	         ▼                                   
+	 ┌───────────────┐                           
+	 │ ┌───────────┐ │                           
+	 │ │Fluent in :│ │─┐  ┌────────────────┐     
+	 │ └───────────┘ │ └─▶│  Objective C   │──┐  
+	 └───────────────┘    └────────────────┘  │  
+	         │        ┌───┐                   ──┐
+	         ▼        │ C │◀┐  ┌─────────┐    │ │
+	     ┌──────┐     └───┘ └──│  Swift  │◀───┘ │
+	  ┌──│ HTML │──────────┐   └─────────┘      ▼
+	  │  └──────┘          ▼         ┌──────────┐
+	  │             ┌────────────┐   │  Python  │
+	  │  ┌─────┐    │ CSS / LESS │   └──────────┘
+	  └─▶│ PHP │─┐  └────────────┘               
+	     └─────┘ ──────┐      ┌───────┐          
+	             ▼     └─────▶│ MySQL │          
+	    ┌─────────────────┐   └───────┘          
+	    │  Javascript /   │                      
+	    │     Jquery      │                      
+	    └─────────────────┘                      
+	             │                               
+	             └───────────┐                   
+	                         ▼                   
+	      ┌────────────────────────────────────┐ 
+	      │  ┌──────────────────────────────┐  │ 
+	      │  │   Over 5 years experience    │  │ 
+	      │  │     developing websites      │  │ 
+	      │  └──────────────────────────────┘  │ 
+	      └────────────────────────────────────┘  -->
+
+
+<!-- 
+*
+* BEAUTY ON THE INSIDE IS MORE IMPORTANT THAN BEAUTY ON THE OUTSIDE.
+*
+*
+* Please enjoy the following artfully crafted code.
+*
+ -->
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Remington Breeze</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet" href="prism/prism.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body class="preload">
+<div class="container">
+
+	<h1><a class="main-link" target="_blank" href="http://twitter.com/remingtonbreeze">Remington Breeze</a></h1>
+
+	<pre><code class="language-javascript">var remington = ['student', 'athlete', 'developer'];</code></pre>
+
+	<div class="terminal-container">
+
+		<div class="terminal">
+			<span class="text">computer:~$ </span>
+		</div>
+
+		<div class="top-bar">
+			<span class="circle-container">
+				<span class="red circle"></span>
+				<span class="yellow circle"></span>
+				<span class="green circle"></span>
+			</span>
+			<span class="title">computer -- bash -- 80x24</span>
+		</div>
+
+	</div>
+	<div class="button contact"><span class="inner">Contact</span></div>
+		<form class="contact" method="POST" action="http://formspree.io/remington.breeze@gmail.com">
+		<input type="text" name="name" placeholder="Name">
+		<input type="text" name="email" placeholder="Email">
+		<input type="text" name="message" placeholder="Message">
+		<div class="submit-container"><input class="button submit" type="submit" value="Go"></div>
+	</form>
+</div>
+<script type="text/javascript" src="prism/prism.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="jquery.color-2.1.2.min.js"></script>
+<script type="text/javascript" src="typed.js"></script>
+<script type="text/javascript">
+
+// Remove class that prevents transitions
+$("window").load(function() {
+	$("body").removeClass("preload");
+});
+
+// Replacement for deprecated toggle function
+(function($) {
+    $.fn.clickToggle = function(func1, func2) {
+        var funcs = [func1, func2];
+        this.data('toggleclicked', 0);
+        this.click(function() {
+            var data = $(this).data();
+            var tc = data.toggleclicked;
+            $.proxy(funcs[tc], this)();
+            data.toggleclicked = (tc + 1) % 2;
+        });
+        return this;
+    };
+}(jQuery));
+
+$(function(){
+	jQuery('.button.contact').animate({
+			backgroundColor: "#DBF6FD", 
+			borderBottomColor: "#8DD2FF"
+	}, 750);
+	$('.button.contact').clickToggle(function(){
+		$('form.contact').fadeIn(500);
+		$(this).addClass('inactive');
+		jQuery(this).animate({
+			backgroundColor: "#ebebeb",
+			borderBottomColor: "#6d6d6d"
+		}, 750);
+		$('.button .inner').fadeOut(function(){ $(this).html('Close')}).fadeIn();
+		if ($('input').val() != "") {
+			$('.button.submit').fadeIn(500);
+		}
+	}, function(){
+		$('form.contact').fadeOut(500);
+		$(this).removeClass('inactive');
+		jQuery(this).animate({
+			backgroundColor: "#DBF6FD", 
+			borderBottomColor: "#8DD2FF"
+		}, 750);
+		$('.button .inner').fadeOut(function(){ $(this).html('Contact')}).fadeIn();
+		$('.button.submit').fadeOut();
+	});
+
+	$('input').keyup(function(){
+		if ( $('.button.submit').is(":visible") ) {
+			if ($('input').val() == "") {
+				$('.button.submit').fadeOut(500);
+			}
+		} 
+		else $('.button.submit').fadeIn(500);
+	});
+
+	$("span:contains('student')").addClass('student');
+	$("span:contains('athlete')").addClass('athlete');
+	$("span:contains('developer')").addClass('developer');
+
+	var width = 430;
+
+	var revertColor = "#a6e22e";
+
+	$('.student').hover(function(){
+		$(this).animate({color : '#ff3b72'}, 250);
+	}, function() {
+		$(this).animate({color : revertColor});
+	});
+
+	$('.athlete').hover(function(){
+		$(this).animate({color : '#ffd800'}, 250);
+	}, function() {
+		$(this).animate({color : revertColor});
+	});
+
+	$('.developer').hover(function(){
+		$(this).animate({color : '#06c9e9'}, 250);
+	}, function() {
+		$(this).animate({color : revertColor});
+	});
+
+	var isAnimating = false;
+
+	$('.student').click(function() {
+		$('.terminal').empty();
+		$('.terminal').html(
+			"<span class='text'>computer:~$ </span>"
+		);
+		$('.terminal').animate({
+			color : '#3BFC34'
+		});
+		$('.terminal').delay(200).slideDown(500);
+		$('.terminal-container .top-bar').delay(705).fadeIn();
+		$('.terminal').css('overflow', 'visible');
+		$('.button.contact').animate({'margin-top' : '64px'}, 300);
+		$('.terminal-container').css({ 'z-index' : '10' });
+		$('.terminal .text').typed({
+			strings: ["echo academics"],
+			typeSpeed: 75,
+			backSpeed: 25,
+			startDelay: 1900,
+			backDelay: 500, 
+			callback: function() {
+				$('.terminal').delay(350).animate({'height' : 285});
+				$('.button.contact').delay(200).animate({'margin-top' : 305, 'margin-bottom' : 25}, function() {
+					$('.terminal .text').append('<br>');
+					setTimeout(function() {
+						$(".terminal .text").append('Cummulative Weighted GPA: 4.16 <br> Courses Completed: <br> AP Calculus AB/BC <br> AP World History <br> AP US History <br> Newspaper (Editor in Chief) <br> Orchestra (Section Leader) <br> AP English 11/12 <br> 2 years Engineering');
+					}, 1500);
+					setTimeout(function() {
+						$('.terminal .text').append("<br>computer:~$ ");
+					}, 2400);
+				});
+			}
+		});
+		$(".button.contact").delay(4500).fadeIn();	
+	});	
+
+	$('.athlete').click(function() {
+		$('.red.circle').prop('disabled', true);
+		$('.terminal').empty();
+		$('.terminal').html(
+			"<span class='text'>computer:~$ </span>"
+		);
+		$('.terminal').animate({
+			color : '#3BFC34'
+		});
+		$('.terminal').delay(200).slideDown(500);
+		$('.terminal-container .top-bar').delay(705).fadeIn();
+		$('.terminal').css('overflow', 'visible');
+		$('.button.contact').animate({'margin-top' : '64px'}, 300);
+		$('.terminal-container').css({ 'z-index' : '10' });
+		$('.terminal .text').typed({
+			strings: ["echo personalRecords"],
+			typeSpeed: 75,
+			backSpeed: 25,
+			startDelay: 1900,
+			backDelay: 500, 
+			callback: function() {
+				$('.terminal').delay(350).animate({'height' : 270});
+				$('.button.contact').delay(200).animate({'margin-top' : 285}, function() {
+					$('.terminal .text').append('<br>');
+					setTimeout(function() {
+						$(".terminal .text").append('3200 meters : 9:24 <br>1600 meters : 4:25 <br>800 meters : 2:01.94 <br>Woodward Park : 15:50 <br>Complete records available here: <br><a href="http://www.athletic.net/TrackAndField/Athlete.aspx?AID=5115390" target="_blank">http://athletic.net</a> <br> Health log available here: <br><a href="http://rbreeze.github.io/dashboard" target="_blank">rbreeze.github.io/dashboard</a>');
+					}, 1500);
+					setTimeout(function() {
+						$('.terminal .text').append("<br>computer:~$ ");
+					}, 2400);
+				});
+			}
+		});
+		$(".button.contact").delay(4500).fadeIn();	
+	});
+
+	$('.developer').click(function() {
+		$('.red.circle').prop('disabled', true);
+		$('.terminal').empty();
+		$('.terminal').html(
+			"<span class='text'>computer:~$ </span>"
+		);
+		$('.terminal').animate({
+			color : '#3BFC34'
+		});
+		$('.terminal').delay(200).slideDown(500);
+		$('.terminal-container .top-bar').delay(705).fadeIn();
+		$('.terminal').css('overflow', 'visible');
+		$('.button.contact').animate({'margin-top' : '64px'}, 300);
+		$('.terminal-container').css({ 'z-index' : '10' });
+		$('.terminal .text').typed({
+			strings: ["open index.html && open style.less"],
+			typeSpeed: 75,
+			backSpeed: 25,
+			startDelay: 1900,
+			backDelay: 500, 
+			callback: function() {
+				$('.terminal').delay(350).animate({'height' : 115});
+				$('.button.contact').delay(200).animate({'margin-top' : 140}, function() {
+					$('.terminal .text').append('<br>');
+					setTimeout(function() {
+						$(".terminal .text").append('index.html available here : <a href="index-source.html" target="_blank">View Source</a><br>style.less available here : <a href="style-source.html" target="_blank">View Source</a>');
+					}, 1500);
+					setTimeout(function() {
+						$('.terminal .text').append("<br>computer:~$ ");
+					}, 2400);
+				});
+			}
+		});
+		$(".button.contact").delay(6500).fadeIn();	
+	});
+
+	$('.red.circle').click(function() {
+		$('.terminal, .terminal a').animate({
+			color : 'transparent'
+		});
+		$('.terminal').delay(200).slideUp(500);
+		$('.terminal-container .top-bar').delay(750).fadeOut();
+		$('.terminal').css('overflow', 'visible');
+		$('.button.contact').delay(900).animate({'margin-top' : '-64px'}, 300);
+		$('.terminal-container').css({ 'z-index' : '-10' });
+		$('.terminal').animate({'height' : 39});
+		$('.button.contact').animate({'margin-top' : '-64px'}, 300);
+		$('.button.contact').fadeOut();
+	});
+
+});
+</script>
+</body>
+</html>
+</xmp>
+
+</body>
+</html>
