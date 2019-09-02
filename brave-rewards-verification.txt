@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: breeze.software
+Token: c9096b8d0fb049148158a5dbdf0919010c433ab9c1877b2a1b55e697a512ec7b
