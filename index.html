@@ -14,7 +14,7 @@
 </head>
 
 <!-- BODY --> 
-<body> 
+<body id="content"> 
   <div class="container">
     <div class="intro">
       <img src="picture.png" class="profile-pic"/>
@@ -29,7 +29,7 @@
     <a href="https://www.csuchico.edu" target="_blank">CSU Chico</a>.
     <h3> 
       <a href="mailto:remington@breeze.software">
-        <i class="far fa-envelope"></i>remington@breeze.software
+        <i class="far fa-envelope"></i> remington@breeze.software
       </a>
     </h3>
     <div class="links">
@@ -73,7 +73,42 @@
       </a>
     </div>
 
+    <a class="btn" id="appearance">
+      <span class="btn-content">
+        <i class="fas fa-moon"></i> Dark Mode
+      </span>
+      <span class="btn-content"> 
+        <i class="fas fa-sun"></i> Light Mode
+      </span>
+    </a>
+
   </div>
 
+  <script>
+    let darkmode = JSON.parse(localStorage.getItem('darkmode')); 
+    let classNames = {
+      add: ["light", "dark"],
+      remove: ["dark", "light"]
+    }
+
+    let setAppearance = function(darkmode) {
+      idx = Number(darkmode) || 0; 
+      let content = document.getElementById('content'); 
+      content.classList.remove(classNames.remove[idx]); 
+      content.classList.add(classNames.add[idx]); 
+      let button = document.getElementById("appearance");
+      let buttonContent = button.getElementsByClassName("btn-content");
+      buttonContent[idx].classList.remove("hidden"); 
+      buttonContent[Number(!Boolean(idx))].classList.add("hidden"); 
+    }
+
+    setAppearance(darkmode);
+    document.getElementById('appearance').onclick = function() {
+      darkmode = !darkmode; 
+      localStorage.setItem('darkmode', darkmode); 
+      setAppearance(darkmode);
+    };
+
+  </script>
 </body>
 </html>

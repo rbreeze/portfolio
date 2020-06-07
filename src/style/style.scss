@@ -4,10 +4,26 @@
          url("fonts/avenir-next.woff") format("woff");
 }
 
+$blue: #3976D0;
+$light-blue: #468DF5;
+
 body {
   background: white;
   font-family: "Avenir Next", sans-serif;
   text-align: center;
+  &.dark {
+    background: black;
+    color: white;
+
+    a, .name {
+      color: $light-blue;
+    }
+
+    .btn {
+      background: $light-blue;
+      color: white !important;
+    }
+  }
 }
 
 .container {
@@ -41,7 +57,7 @@ h2 {
 }
 
 a, .name {
-  color: #2F72D1;
+  color: $blue;
   text-decoration: none;
 }
 
@@ -54,10 +70,15 @@ a, .name {
 
 .btn {
   color: white;
-  background: #2F72D1;
+  background: $blue;
   padding: 8px; 
   border-radius: 5px;
   margin-right: 10px;
+  cursor: pointer;
+
+  .hidden {
+    display: none;
+  }
 }
 
 .links {
