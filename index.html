@@ -13,13 +13,17 @@
 
 <!-- STYLE -->
 <style>
-@font-face {
-  src: url("brandon_reg.otf");
-  font-family: "Brandon Grotesque";
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=87709d29-d9c5-4f8f-883a-8183422c229c");
+
+@font-face{
+    font-family: "Avenir Next";
+    src: url("fonts/avenir-next.woff2") format("woff2"),
+         url("fonts/avenir-next.woff") format("woff");
 }
+
 body {
-  background: #F1EDE3;
-  font-family: "Brandon Grotesque", sans-serif;
+  background: white;
+  font-family: "Avenir Next", sans-serif;
   text-align: center;
 }
 .container {
@@ -27,6 +31,9 @@ body {
   margin: 0 auto;
   margin-top: 30px;
   padding-bottom: 30px;
+}
+strong {
+  font-weight: 600;
 }
 @media (max-width: 700px) {
   .container {
@@ -36,10 +43,17 @@ body {
 h1 {
   margin-top: 0;
   margin-bottom: 0;
+  font-weight: 500;
 }
 h2 {
-  margin-bottom: 10px;
-  margin-top: 0px;
+  margin: 0 auto;
+  margin-bottom: 18px;
+  font-size: 22px;
+  width: 50%;
+  font-weight: 500;
+}
+h3 {
+  font-weight: 500;
 }
 a, .name {
   color: #2F72D1;
@@ -94,10 +108,12 @@ ul {
       <h1> Hi, I'm <span class="name">Remington Breeze</span>. </h1>
     </div>
     <h2> I'm a 
-      <strong>Computer Science student</strong> 
-      at 
-      <a href="https://www.csuchico.edu" target="_blank"> CSU Chico </a>. 
+      <strong>Software Engineering Intern</strong> 
+      at Intuit working on 
+      <a href="https://github.com/argoproj/argo" target="_blank">Argo</a>. 
     </h2>
+    I have a bachelor's degree in Computer Science from 
+    <a href="https://www.csuchico.edu" target="_blank">CSU Chico</a>.
     <h3> 
       <a href="mailto:remington@breeze.software">remington@breeze.software</a>
     </h3>
@@ -112,9 +128,9 @@ ul {
       </a>
     </div>
 
-    <div>I'm also an experienced <strong>web developer</strong> and an expert at creating full stack web applications with RESTful Node.js API's and frontend Javascript frameworks. Right now, I am learning more about machine learning and GraphQL.</div>
+    <div>I'm an experienced <strong>web developer</strong> and an expert at creating full stack web applications with RESTful Node.js API's and frontend Javascript frameworks. Right now, I am learning more about Kubernetes, Go, React and GraphQL.</div>
     
-    <div> My favorite tools to use are Node, GraphQl, Vue.js, Bootstrap, and Common Lisp.</div>
+    <div> My favorite tools to use are Node, Vue.js, Go and Common Lisp.</div>
 
     <div class="beliefs">
       <strong>  I believe in simplicity, hard work, and being a good person. </strong>
