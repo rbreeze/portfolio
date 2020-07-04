@@ -8,133 +8,112 @@
   <!-- Viewport --> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome --> 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">  
+  <!-- STYLE -->
+  <link rel="stylesheet" href="./assets/css/style.min.css" type="text/css">
 </head>
 
-<!-- STYLE -->
-<style>
-@font-face {
-  src: url("brandon_reg.otf");
-  font-family: "Brandon Grotesque";
-}
-body {
-  background: #F1EDE3;
-  font-family: "Brandon Grotesque", sans-serif;
-  text-align: center;
-}
-.container {
-  width: 700px;
-  margin: 0 auto;
-  margin-top: 30px;
-  padding-bottom: 30px;
-}
-@media (max-width: 700px) {
-  .container {
-    width: 95%;
-  }
-}
-h1 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-h2 {
-  margin-bottom: 10px;
-  margin-top: 0px;
-}
-a, .name {
-  color: #2F72D1;
-  text-decoration: none;
-}
-.intro {
-  margin: auto;
-  display: inline-flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.btn {
-  color: white;
-  background: #2F72D1;
-  padding: 8px; 
-  border-radius: 5px;
-  margin-right: 10px;
-}
-.links {
-  margin: 30px auto;
-}
-.profile-pic {
-  width: 60px;
-  height: 60px;
-  margin-right: 15px;
-  border-radius: 3px;
-}
-div {
-  margin: 15px 0;
-}
-.beliefs {
-  font-size: 20px;
-}
-ul {
-  list-style: square;
-  padding-left: 0;
-}
-.more {
-  margin-top: 30px;
-}
-.more a {
-  font-size: 18px;
-  margin: 0 15px;
-}
-</style>
-
 <!-- BODY --> 
-<body> 
+<body id="content"> 
   <div class="container">
     <div class="intro">
-      <img src="picture.png" class="profile-pic"/>
-      <h1> Hi, I'm <span class="name">Remington Breeze</span>. </h1>
+      <img src="./assets/images/picture.png" class="profile-pic"/>
+      <h1> 
+        Hi, I'm 
+        <span class="name-container"> 
+          <span class="name">Remington Breeze</span>. 
+        </span>
+      </h1>
     </div>
     <h2> I'm a 
-      <strong>Computer Science student</strong> 
-      at 
-      <a href="https://www.csuchico.edu" target="_blank"> CSU Chico </a>. 
+      <strong>Software Engineering Intern</strong> 
+      at Intuit working on 
+      <a href="https://github.com/argoproj/argo" target="_blank">Argo</a>. 
     </h2>
+    I have a bachelor's degree in Computer Science from 
+    <a href="https://www.csuchico.edu" target="_blank">CSU Chico</a>.
     <h3> 
-      <a href="mailto:remington@breeze.software">remington@breeze.software</a>
+      <a href="mailto:remington@breeze.software">
+        <i class="far fa-envelope"></i> remington@breeze.software
+      </a>
     </h3>
     <div class="links">
       <a href="https://github.com/rbreeze" target="_blank" class="btn"> 
         <i class="fab fa-github"></i>
         My GitHub
       </a>
-      <a href="Remington Breeze - Resume.pdf" target="_blank" class="btn">
-        <i class="fas fa-file-alt"></i> 
+      <a href="documents/Remington Breeze - Resume.pdf" target="_blank" class="btn">
+        <i class="fas fa-file-alt"></i>
         My Resume
       </a>
     </div>
 
-    <div>I'm also an experienced <strong>web developer</strong> and an expert at creating full stack web applications with RESTful Node.js API's and frontend Javascript frameworks. Right now, I am learning more about machine learning and GraphQL.</div>
+    <div>I'm an experienced <strong>web developer</strong> and an expert at creating full stack web applications with RESTful Node.js API's and frontend Javascript frameworks. Right now, I am learning more about Kubernetes, Go, React and GraphQL.</div>
     
-    <div> My favorite tools to use are Node, GraphQl, Vue.js, Bootstrap, and Common Lisp.</div>
+    <div> My favorite tools to use are Node, Vue.js, Go and Common Lisp.</div>
 
     <div class="beliefs">
-      <strong>  I believe in simplicity, hard work, and being a good person. </strong>
+      <strong>  I believe in simplicity, hard work, and kindness. </strong>
     </div>
 
     <div> Projects I'm most proud of: </div>
     <div class="projects links">
       <a href="https://racebase.run" target="_blank" class="btn">RaceBase</a> </li>
-      <a href="https://github.com/rbreeze/janet-api" target="_blank" class="btn">JANET</a>
-      <a href="https://github.com/rbreeze/PaceCalc-3" target="_blank" class="btn">PaceCalc</a>
+      <a href="https://techlore.tech" target="_blank" class="btn">Techlore Website*</a>
+      <a href="https://github.com/rbreeze/PaceCalc" target="_blank" class="btn">PaceCalc</a>
     </div>
 
+    <div class="asterisk">*Major update coming soon</div>
+    
+    <div class="more-description"> More detailed information: </div>
     <div class="more links">
-      <div> More detailed information: </div>
-      <a href="Remington Breeze - Projects.pdf" target="_blank">Projects</a>
-      <a href="Remington Breeze - Experience.pdf" target="_blank">Experience</a>
-      <a href="Remington Breeze - Coursework.pdf" target="_blank">Coursework</a>
+      <a href="documents/Remington Breeze - Projects.pdf" target="_blank">
+        Projects
+      </a>
+      <a href="documents/Remington Breeze - Experience.pdf" target="_blank">
+        Experience
+      </a>
+      <a href="documents/Remington Breeze - Coursework.pdf" target="_blank">
+        Coursework
+      </a>
     </div>
+
+    <a class="btn" id="appearance">
+      <span class="btn-content">
+        <i class="fas fa-moon"></i> Dark Mode
+      </span>
+      <span class="btn-content"> 
+        <i class="fas fa-sun"></i> Light Mode
+      </span>
+    </a>
 
   </div>
 
+  <script type="text/javascript">
+    let darkmode = JSON.parse(localStorage.getItem('darkmode')); 
+    let classNames = {
+      add: ["light", "dark"],
+      remove: ["dark", "light"]
+    }
+
+    let setAppearance = function(darkmode) {
+      idx = Number(darkmode) || 0; 
+      let content = document.getElementById('content'); 
+      content.classList.remove(classNames.remove[idx]); 
+      content.classList.add(classNames.add[idx]); 
+      let button = document.getElementById("appearance");
+      let buttonContent = button.getElementsByClassName("btn-content");
+      buttonContent[idx].classList.remove("hidden"); 
+      buttonContent[Number(!Boolean(idx))].classList.add("hidden"); 
+    }
+
+    setAppearance(darkmode);
+    document.getElementById('appearance').onclick = function() {
+      darkmode = !darkmode; 
+      localStorage.setItem('darkmode', darkmode); 
+      setAppearance(darkmode);
+    };
+
+  </script>
 </body>
 </html>
