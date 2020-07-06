@@ -1,8 +1,8 @@
 # Remington Breeze
 
-**(916) 934 3827**
-**<remington@breeze.software>**
-**<https://breeze.software>**
+- **(916) 934 3827**
+- **<remington@breeze.software>**
+- **<https://breeze.software>**
 
 ## Education
 ### [California State University, Chico](https://www.csuchico.edu)
