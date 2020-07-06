@@ -1,16 +1,16 @@
 # Remington Breeze
 
-## (916) 934 3827
-## remington@breeze.software 
-## breeze.software
+**(916) 934 3827**
+**<remington@breeze.software>**
+**<https://breeze.software>**
 
 ## Education
-### [California State University, Chico](https://csuchico.edu)
+### [California State University, Chico](https://www.csuchico.edu)
 Bachelor of Computer Science - May 2020
 Master of Computer Science - Graduating May 2021
 
 ## Projects
-### RaceBase - [https://racebase.run](https://racebase.run)
+### RaceBase - <https://racebase.run>
 #### *Node JS, MongoDB, Nuxt, Vue.js, AngularJS, Bootstrap, git, DigitalOcean, Nginx, Google Analytics, Docker*
 
 - Website for runners and coaches to post race results and keep training logs
@@ -62,4 +62,4 @@ Master of Computer Science - Graduating May 2021
 - 2 Time Team CCAA Champions (2017, 2019), Team NCAA West Region Champions
 
 
-*More details available at [https://breeze.software](https://breeze.software) or by request.*
+*More details available at <https://breeze.software> or by request.*
