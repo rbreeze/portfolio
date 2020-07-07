@@ -36,20 +36,24 @@ Master of Computer Science - Graduating May 2021
 - Learned object oriented programming with Swift and designed iOS user interface through Xcode and Interface Builder
 
 ## Experience
-### Software Engineering Intern - Intuit (Argo Project) -  *May 2020 - Present*
+### Software Engineering Intern - Intuit (Argo Project)
+#### *May 2020 - Present*
 
-### Web Developer - Techlore March - *October 2018, November 2019*
+### Web Developer - Techlore
+#### *March - October 2018, November 2019*
 
 - Designed and implemented static website with Jekyll, hosted on GitHub pages
 - Communicated with business owner remotely through FaceTime and phone calls to meet deadlines and specifications - Currently creating dynamic blog and administration interface for business owner using Node.js and Express
 
-### Assistant Recreation Supervisor - Tahoe Donner Association - *Summer 2018, Summer 2019*
+### Assistant Recreation Supervisor - Tahoe Donner Association
+#### *Summer 2018, Summer 2019*
 
 - Managed the schedules of employees in the Recreation Department
 - Organized activities for childrens’ adventure days and supervised 5-10 children
 - Organized and lead stargazing special events involving presentations about featured celestial bodies
 
-### Web Developer - The Colour Bar - *Spring - Summer 2018*
+### Web Developer - The Colour Bar 
+#### *Spring - Summer 2018*
 
 - Developed backend inventory management system for Sacramento hair salon with MongoDB and Node.js
 - Revised commercial WordPress theme for use in business’ customer facing website
