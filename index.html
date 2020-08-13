@@ -14,10 +14,10 @@
 </head>
 
 <!-- BODY --> 
-<body id="content"> 
+<body> 
   <div class="container">
     <div class="intro">
-      <img src="./assets/images/picture.png" class="profile-pic"/>
+      <img src="./assets/images/profile.png" class="profile-pic"/>
       <h1> 
         Hi, I'm 
         <span class="name-container"> 
@@ -89,31 +89,10 @@
 
   </div>
 
-  <script type="text/javascript">
-    let darkmode = JSON.parse(localStorage.getItem('darkmode')); 
-    let classNames = {
-      add: ["light", "dark"],
-      remove: ["dark", "light"]
-    }
-
-    let setAppearance = function(darkmode) {
-      idx = Number(darkmode) || 0; 
-      let content = document.getElementById('content'); 
-      content.classList.remove(classNames.remove[idx]); 
-      content.classList.add(classNames.add[idx]); 
-      let button = document.getElementById("appearance");
-      let buttonContent = button.getElementsByClassName("btn-content");
-      buttonContent[idx].classList.remove("hidden"); 
-      buttonContent[Number(!Boolean(idx))].classList.add("hidden"); 
-    }
-
-    setAppearance(darkmode);
-    document.getElementById('appearance').onclick = function() {
-      darkmode = !darkmode; 
-      localStorage.setItem('darkmode', darkmode); 
-      setAppearance(darkmode);
-    };
-
+  <script type='module'>
+    import * as dm from './darkmode.js';
+    dm.Init();
+    document.getElementById('appearance').onclick = dm.ChangeTheme;
   </script>
 </body>
 </html>

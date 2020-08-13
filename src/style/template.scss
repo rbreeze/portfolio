@@ -1,0 +1,25 @@
+.template {
+	&--header {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding: 0 20px;
+	}
+	&--profile-pic {
+		$size: 30px;
+		width: $size;
+		height: $size;
+		margin-right: 15px;
+		border-radius: 3px;
+	}
+	&--btn {
+		margin-left: 15px;
+		padding: 0;
+		$size: 30px;
+		width: $size;
+		height: $size;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
