@@ -50,7 +50,7 @@ In adding this feature, I quickly found out that the actual MVP implementation t
 
 To quickly explain the feature: memoization is the process of storing the results of expensive processes in a cache to save time and resources later on. In the context of a workflow, this means saving the outputs of a template to a ConfigMap that we use as a cache, and a key is specified by the user. Later we hope to add support for other persistence layers like Redis. Here’s an example of a workflow taking advantage of this.
 
-I’d like to briefly go over the heart of the code for this feature because I’m especially proud of these contributions.  
+I’d like to briefly go over the [heart of the code](https://github.com/argoproj/argo/blob/master/workflow/controller/cache/cache.go) for this feature because I’m especially proud of these contributions.  
 
 # PHASE 3: ARGO CD
 
