@@ -34,7 +34,7 @@ This was a great introduction to Golang, because I’d never coded in Go before 
 
 ## WORKFLOWS DRAWER
 
-Before I began work on the @latest alias, I picked up an [issue](https://github.com/argoproj/argo/issues/2782) in which a user requested a new column in the Workflows List view to display labels. This feature became my first PR, and soon after this column evolved into an entirely new UI element that I call the [Workflow Drawer](feat(ui): Add drawer with more details for each workflow in Workflow List). I’ll demo this now.
+Before I began work on the @latest alias, I picked up an [issue](https://github.com/argoproj/argo/issues/2782) in which a user requested a new column in the Workflows List view to display labels. This feature became my [second PR](https://github.com/argoproj/argo/pull/3143), and soon after this column evolved into an entirely new UI element that I call the [Workflow Drawer](https://github.com/argoproj/argo/pull/3151). I’ll demo this now.
 
 In the process of creating this drawer, we also discovered that the UI was inadvertently receiving far too much information for each workflow from the API, which was causing problems for users with hundreds of workflows. I [fixed the API](https://github.com/argoproj/argo/pull/3165) to address this, and as a result the Workflows List view can now handle thousands of workflows. Additionally, the information displayed in the Workflows Drawer is not loaded from the server until a user actually clicks the `more` button.
 
