@@ -30,7 +30,7 @@ As someone who had never worked with Kubernetes at this level before, I also fel
 
 My first contribution to the Argo Project was opening an issue for an idea: when going through Argo Workflows’ getting started guide I noticed I was copying and pasting a lot of workflow names, and I wanted an easy way to act on a workflow I just submitted. We discussed different solutions and settled on an alias - [@latest](https://github.com/argoproj/argo/pull/3179) - that can be used with any relevant CLI command. I’ll demo this quickly here. 
 
-This was a great introduction to Golang, because I’d never coded in Go before and the CLI code isn’t terribly complex. I also got a small intro to the controller here because I had to make changes to it for this to work; you can take a look at the code at this link, this is all available on my website. 
+This was a great introduction to Golang, because I’d never coded in Go before and the CLI code isn’t terribly complex. I also got a small intro to the controller here because I had to make changes to it for this to work.
 
 ## WORKFLOWS DRAWER
 
