@@ -44,7 +44,7 @@ The last portion of this phase was adding a [batch selection feature](https://gi
 
 # PHASE 2: MEMOIZATION
 
-After a few weeks I got into the rhythm of making regular contributions in the form of larger features as detailed previously, as well as smaller bug fixes. Jesse (my manager) and Simon began discussing with me the idea of a larger contribution I could make, and we settled on the addition of caching to Argo Workflows. 
+After a few weeks I got into the rhythm of making regular contributions in the form of smaller/medium features as detailed previously, as well as smaller bug fixes. Jesse (my manager) and Simon began discussing with me the idea of a larger contribution I could make, and we settled on the addition of caching to Argo Workflows. 
 
 In adding this feature, I quickly found out that the actual MVP implementation takes up a very small percentage of the time and work. I spent about a month working on this, but had a demo-able implementation working within a week- the rest of the time was spent writing and debugging tests, debugging edge cases, and addressing feedback from code review. I saw in a very tangible way that it’s not enough to hash out some quick and dirty code that’s untestable, unmaintainable, and unreliable - especially in an open source project that runs on enterprise production K8S clusters. 
 
