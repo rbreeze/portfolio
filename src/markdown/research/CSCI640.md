@@ -25,6 +25,8 @@ For the Pi Calculation, I calculated using 262144 points up to 67108864 (4^24) p
 
 ## Results and Analysis
 
+Click [here](./CSCI640-data.pdf) for a PDF with all results and charts.
+
 In every case, my testing confirmed my hypothesis that Dockerizing the programs would negatively impact their performance. However, the margin with which this occured varied greatly. 
 
 The Pi calculation showed a small (about 6-7%) performance hit on Docker compared to native in Go, and a much larger (as much as 72%) performance hit in C++. For both languages, however, the performance difference stayed relatively constant (of the same order of magnitude) as the calculation size increased. I posit that this is explained by the existence of a constant overhead for each operation in Docker.

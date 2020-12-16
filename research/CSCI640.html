@@ -46,6 +46,7 @@
 For Merge Sort, I used array sizes of 4096 up to 4194304 elements for both C++ and Go.
 For the Pi Calculation, I calculated using 262144 points up to 67108864 (4^24) points for both C++ and Go.</p>
 <h2 id="results-and-analysis">Results and Analysis</h2>
+<p>Click <a href="./CSCI640-data.pdf">here</a> for a PDF with all results and charts.</p>
 <p>In every case, my testing confirmed my hypothesis that Dockerizing the programs would negatively impact their performance. However, the margin with which this occured varied greatly. </p>
 <p>The Pi calculation showed a small (about 6-7%) performance hit on Docker compared to native in Go, and a much larger (as much as 72%) performance hit in C++. For both languages, however, the performance difference stayed relatively constant (of the same order of magnitude) as the calculation size increased. I posit that this is explained by the existence of a constant overhead for each operation in Docker.</p>
 <p>This theory begins to falter, however, when looking at the Matrix Multiplication results. In C++, the relative runtime differential for Docker decreases greatly with input size; at small input sizes, it is as much as 75% but it decreases rapidly to hover around 0%. To further confuse matters, in Go, this pattern is reversed as the differential starts at &lt;10% for the smallest inputs and increases to over 100%. The C++ result may be explained by an intial setup cost that takes up a proportionately smaller share of the runtime as that runtime increases.</p>
