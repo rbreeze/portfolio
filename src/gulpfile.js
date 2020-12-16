@@ -3,17 +3,18 @@ const sass = require('gulp-sass');
 const tap = require('gulp-tap');
 const Handlebars = require('handlebars');
 const markdown = require('gulp-markdown');
+const path = require('path');
 
-const BASE = '../../';
+const BASE = '.';
 
 exports.watch = function watch(cb) {
-  gulp.watch('src/style/**/*.scss', gulp.series(['sass'])); 
-  gulp.watch('src/markdown/**/*.md', gulp.series(['pages']));
+  gulp.watch('./style/**/*.scss', gulp.series(['sass'])); 
+  gulp.watch('./markdown/**/*.md', gulp.series(['pages']));
   cb();
 }
 
 function sassCompile(cb) {
-	gulp.src('src/style/**/*.scss')
+	gulp.src('./style/**/*.scss')
 	    .pipe(sass())
 	    .pipe(gulp.dest('assets/css'));
 	cb();
@@ -24,17 +25,17 @@ function markdownCompile(cb) {
 		.pipe(tap(function(file) {
 	      var template = Handlebars.compile(file.contents.toString());
 
-	      return gulp.src('src/markdown/**/*.md')
+	      return gulp.src('./markdown/**/*.md')
 	        .pipe(markdown())
 	        .pipe(tap(function(file) {
 	        	var data = {
 					contents: file.contents.toString(),
-					BASE: BASE
+					BASE: path.dirname(path.relative(file.path, file.base))
 				};
 				var html = template(data);
-				file.contents = new Buffer(html, "utf-8");
+				file.contents = new Buffer.from(html, "utf-8");
 	        }))
-	        .pipe(gulp.dest('./pages'));
+	        .pipe(gulp.dest('../'));
     }));
 	cb();
 }

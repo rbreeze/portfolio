@@ -1,10 +1,12 @@
-# Gallery Walk Presentation
+# A Summer at Intuit
+
+13 August 2020
 
 [My Argo Issues and Pull Requests](https://github.com/pulls?q=author%3Arbreeze+repo%3Aargoproj%2Fargo+repo%3Aargoproj%2Fargo-cd+sort%3Acreated-asc)
 
 # INTRO 
 
-My name is [Remington](https://breeze.software), and I’m a software engineering intern working on the [Argo Project](https://argoproj.github.io). 
+My name is [Remington](https://breeze.software), and I’m a software engineering intern working on the [Argo Project](https://argoproj.github.io) at Intuit. 
 
 I’m a Computer Science masters student at CSU Chico, which is about 2 hours north of Sacramento in Northern California. In addition to my career interests I like to run long distance and draw.
 
