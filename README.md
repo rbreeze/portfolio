@@ -1,3 +1,3 @@
 # <https://breeze.software>
 
-[Resume](./documents/resume.md)
+[Resume](https://breeze.software/resume)

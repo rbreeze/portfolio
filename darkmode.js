@@ -11,8 +11,7 @@ export const ToggleHideSettings = function() {
 }
 
 export const Init = function() {
-  const dm = getFromLocalStorage('darkmode');
-  ToggleClass(document.body, SetButton('appearance', dm), 'dark');
+  ToggleClass(document.body, SetButton('appearance', getFromLocalStorage('darkmode')), 'dark');
   ToggleClass(document.getElementById("settings"), SetButton('hide', getFromLocalStorage('hide-settings')), 'hidden');
 }
 
