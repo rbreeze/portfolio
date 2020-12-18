@@ -4,6 +4,14 @@
 		align-items: center;
 		justify-content: flex-end;
 		padding: 0 20px;
+		&.hidden {
+			top: 0;
+			right: 0;
+			position: absolute;
+			& .hide-me {
+				display: none;
+			}
+		}
 	}
 	&--profile-pic {
 		$size: 30px;
@@ -13,7 +21,8 @@
 		border-radius: 3px;
 	}
 	&--btn {
-		margin-left: 15px;
+		margin-left: 10px;
+		margin-right: 0;
 		padding: 0;
 		$size: 30px;
 		width: $size;

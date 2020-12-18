@@ -1,30 +1,43 @@
-const classNames = {
-  add: ["light", "dark"],
-  remove: ["dark", "light"]
-}
-
-const getDarkMode = function() {
-  return JSON.parse(localStorage.getItem('darkmode'));
+const getFromLocalStorage = function(key) {
+  return JSON.parse(localStorage.getItem(key));
 }
 
 export const ChangeTheme = function() {
-  const dm = getDarkMode()
-  localStorage.setItem('darkmode', !dm); 
-  SetAppearance(!dm);
+  ToggleClass(document.body, ToggleButton('appearance', 'darkmode'), 'dark');
+}
+
+export const ToggleHideSettings = function() {
+  ToggleClass(document.getElementById("settings"), ToggleButton('hide', 'hide-settings'), 'hidden');
 }
 
 export const Init = function() {
-  const darkmode = getDarkMode()
-  SetAppearance(darkmode);
+  const dm = getFromLocalStorage('darkmode');
+  ToggleClass(document.body, SetButton('appearance', dm), 'dark');
+  ToggleClass(document.getElementById("settings"), SetButton('hide', getFromLocalStorage('hide-settings')), 'hidden');
 }
 
-export const SetAppearance = function(darkmode) {
-  const idx = Number(darkmode) || 0; 
-  let content = document.body; 
-  content.classList.remove(classNames.remove[idx]); 
-  content.classList.add(classNames.add[idx]); 
-  let button = document.getElementById("appearance");
-  let buttonContent = button.getElementsByClassName("btn-content");
-  buttonContent[idx].classList.remove("hidden"); 
-  buttonContent[Number(!Boolean(idx))].classList.add("hidden"); 
+export const SetButton = function(buttonId, val) {
+  let button = document.getElementById(buttonId);
+  if (button) {
+    let buttonContent = button.getElementsByClassName("btn-content");
+    const idx = Number(val) || 0;
+    buttonContent[idx].classList.remove("hidden"); 
+    buttonContent[Number(!Boolean(idx))].classList.add("hidden");
+  }
+  return val;
+}
+
+export const ToggleButton = function(buttonId, localStorageKey) {
+  const val = getFromLocalStorage(localStorageKey);
+  localStorage.setItem(localStorageKey, !val);
+  return SetButton(buttonId, !val);
+}
+
+export const ToggleClass = function(content, val, className) {
+  if (!content) return;
+  if (val) {
+    content.classList.add(className); 
+  } else {
+    content.classList.remove(className);
+  }
 }

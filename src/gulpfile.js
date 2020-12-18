@@ -15,8 +15,8 @@ exports.watch = function watch(cb) {
 
 function sassCompile(cb) {
 	gulp.src('./style/**/*.scss')
-	    .pipe(sass())
-	    .pipe(gulp.dest('assets/css'));
+	    .pipe(sass({outputStyle: 'compressed'}))
+	    .pipe(gulp.dest('../assets/css'));
 	cb();
 }
 

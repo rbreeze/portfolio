@@ -1,28 +1,50 @@
 @font-face{
     font-family: "Avenir Next";
-    src: url("fonts/avenir-next.woff2") format("woff2"),
-         url("fonts/avenir-next.woff") format("woff");
+    src: url("../fonts/avenir-next.woff2") format("woff2"),
+         url("../fonts/avenir-next.woff") format("woff");
 }
 
 $blue: #3976D0;
 $light-blue: #468DF5;
 
+@mixin darkmode {
+  background: black;
+  color: white;
+
+  a, .name {
+    color: $light-blue;
+  }
+
+  .btn {
+    background: $light-blue;
+    color: white !important;
+  }
+}
+
+@mixin lightmode {
+  background: white;
+  color: black !important;
+
+  a, .name {
+    color: $blue !important;
+  }
+
+  .btn {
+    color: white;
+    background: $blue !important;
+  }
+}
+
 body {
   background: white;
   font-family: "Avenir Next", sans-serif;
   &.dark {
-    background: black;
-    color: white;
-
-    a, .name {
-      color: $light-blue;
-    }
-
-    .btn {
-      background: $light-blue;
-      color: white !important;
-    }
+    @include darkmode;
   }
+}
+
+table {
+  width: 100%;
 }
 
 .container {
@@ -35,13 +57,29 @@ body {
   }
 }
 
+hr {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-color: $light-blue;
+}
+
 strong {
   font-weight: 600;
 }
 
+em {
+  font-weight: normal;
+}
+
 h1, h2, h3 {
-  text-align: left;
+  text-align: auto;
   font-weight: 500;
+}
+
+h1, h2, h3, h4 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-bottom: 0.5em;
 }
 
 h1 {
@@ -50,11 +88,19 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 18px;
-  font-size: 22px;
+  font-size: 20px;
   @media (max-width: 700px) {
     width: 100%;
   }
+}
+
+h3 {
+  margin-bottom: 0.25em;
+}
+
+h4 {
+  font-size: 15px;
+  line-height: 1em;
 }
 
 a, .name {
@@ -121,6 +167,7 @@ div {
 ul {
   list-style: square;
   padding-left: 0;
+  margin-block-start: 0.25em;
 }
 
 .more {
@@ -140,4 +187,18 @@ ul {
 .asterisk {
   font-size: 12px;
   text-transform: uppercase;
+}
+
+@media print {
+  .container {
+    width: 1000px;
+  }
+
+  body {
+    @include lightmode;
+  }
+
+  #settings {
+    display: none;
+  }
 }

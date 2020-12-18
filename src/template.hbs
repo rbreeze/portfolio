@@ -1,38 +1,47 @@
 <!DOCTYPE HTML>
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179495993-1"></script>
-	  <script>
-	    window.dataLayer = window.dataLayer || [];
-	    function gtag(){dataLayer.push(arguments);}
-	    gtag('js', new Date());
-	    gtag('config', 'UA-179495993-1');
-	  </script>
-	<title>Remington Breeze</title>
-	<link rel='stylesheet' href='{{BASE}}/assets/css/style.min.css' type='text/css'>
-	<link rel='stylesheet' href='{{BASE}}/assets/css/template.css' type='text/css'>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179495993-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-179495993-1');
+      </script>
+    <title>Remington Breeze</title>
+    <link rel='stylesheet' href='{{BASE}}/assets/css/style.css' type='text/css'>
+    <link rel='stylesheet' href='{{BASE}}/assets/css/template.css' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">  
 </head>
 <body>
-	<div class='template--header'>
-		<img src="{{BASE}}/assets/images/profiles/default.png" class="template--profile-pic"/>
-		<a href='https://breeze.software' target='_blank'>breeze.software</a>
-		<div class='template--btn btn' id='appearance'>
-			<span class="btn-content">
-				<i class="fas fa-moon"></i>
-			</span>
-			<span class="btn-content"> 
-				<i class="fas fa-sun"></i>
-			</span>
-		</div>
-	</div>
-	<div class='template--content container'>
-		{{{contents}}}
-	</div>
+    <div class='template--header' id='settings'>
+        <img src="{{BASE}}/assets/images/profiles/default.png" class='template--profile-pic hide-me'/>
+        <a href='https://breeze.software' class='hide-me' target='_blank'>breeze.software</a>
+        <div class='template--btn btn' id='hide'>
+            <span class="btn-content">
+                <i class="fas fa-eye-slash"></i>
+            </span>
+            <span class="btn-content"> 
+                <i class="fas fa-eye"></i>
+            </span>
+        </div>
+        <div class='template--btn btn hide-me' id='appearance'>
+            <span class="btn-content">
+                <i class="fas fa-moon"></i>
+            </span>
+            <span class="btn-content"> 
+                <i class="fas fa-sun"></i>
+            </span>
+        </div>
+    </div>
+    <div class='template--content container'>
+        {{{contents}}}
+    </div>
 </body>
 
 <script type='module'>
-	import * as dm from '{{BASE}}/darkmode.js';
+    import * as dm from '{{BASE}}/darkmode.js';
     dm.Init();
     document.getElementById('appearance').onclick = dm.ChangeTheme;
+    document.getElementById('hide').onclick = dm.ToggleHideSettings;
 </script>
