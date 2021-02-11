@@ -1,0 +1,36 @@
+body {
+    font-family: 'Avenir Next', sans-serif;
+    background: #0d1117;
+    color: white;
+    padding: 10px;
+}
+
+label {
+    display: block;
+}
+
+textarea,
+button {
+    display: block;
+    -webkit-appearance: none;
+    border-radius: 5px;
+    border: 1px solid #30363d;
+    background: #0d1117;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+}
+
+textarea {
+    font-family: 'Monaco';
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover,
+button.selected {
+    background-color: #30363d;
+    border-color: #8e97a1;
+}
