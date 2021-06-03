@@ -1,0 +1,32 @@
+#!/bin/bash
+if [ "$2" = "" ]
+then
+	echo "ERROR: you must specify a commit message"
+	exit ;
+fi
+git status
+echo "Press any key to continue"
+while [ true ]
+do
+	read -n 1
+	if [ $? = 0 ]
+	then
+		curbranch=$(git branch --show-current)
+		if [ "$curbranch" = "master" ]
+		then
+			echo "You are on the master branch. Are you sure?"
+			while [ true ]
+			do
+				read -n 1
+				if [ $? = 0 ]
+				then
+					break
+				fi
+			done
+		fi
+		git add .
+		git commit -s -m "$2"
+		git push $1 $curbranch
+		exit ;
+	fi
+done
